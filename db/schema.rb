@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20170613012346) do
     t.text     "content"
     t.string   "username"
     t.integer  "post_id"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
