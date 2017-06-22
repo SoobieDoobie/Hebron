@@ -1,0 +1,152 @@
+<header>		
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="navigation">
+				<div class="container">					
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse.collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<div class="navbar-brand">
+							<a href="index.html"><img src="images/HebronLogo_Phone.jpg" class="img-responsive" style="height: 100%; width: auto;" /></a>
+						</div>
+					</div>
+					
+					<div class="navbar-collapse collapse">							
+						<div class="menu">
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation"><a href="/index">Home</a></li>
+								<li role="presentation"><a href="/about">About Us</a></li>
+								<li role="presentation"><a href="/gallery">Gallery</a></li>								
+								<li role="presentation"><a href="/contact" class="active">Contact</a></li>	
+								<% if user_signed_in? %>
+								<li role="presentation"><a href="/quotes">Quotes</a></li>
+								<li role="presentation"><a href="/users/sign_out">Staff LogOut</a></li>
+								<% else %>
+								<li role="presentation"><a href="/users/sign_in">Staff LogIn</a></li>
+								<% end %>
+							</ul>
+						</div>
+					</div>						
+				</div>
+			</div>	
+		</nav>		
+	</header>
+	
+	<div id="breadcrumb">
+		<div class="container">	
+			<div class="breadcrumb">							
+				<li><a href="index.html">Home</a></li>
+				<li>Contact</li>			
+			</div>		
+		</div>	
+	</div>
+
+	
+	<section id="contact-page">
+        <div class="container">
+            <div class="center">
+            	<br>        
+                <h2>GET A QUOTE</h2>
+                <p>Please fill up the form below for appointment and one our staff member will contact you soon.</p>
+            </div> 
+            <div class="row contact-wrap"> 
+                <div class="status alert alert-success" style="display: none"></div>
+                <div class="col-md-6 col-md-offset-3">
+                    <div id="sendmessage">Your message has been sent. Thank you!</div>
+                    <div id="errormessage"></div>
+                    <form action="/posts" method="post" role="form" class="contactForm">
+                            <div class="form-group">
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                    <div class="validation"></div>
+                            </div>
+                            <div class="form-group">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                                    <div class="validation"></div>
+                            </div>
+                            <div class="form-group">
+                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                    <div class="validation"></div>
+                            </div>
+                            <div class="form-group">
+                                    <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                                    <div class="validation"></div>
+                            </div>
+                        <div class="text-center"><button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Submit</button></div><br>
+                    </form>                       
+                </div>
+            </div><!--/.row-->
+        </div><!--/.container-->
+        <div class="about">
+			<div class="container">
+				<div class="text-center">
+				<div class="col-md-3">
+					<div class="hi-icon-wrap hi-icon-effect wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" >
+						<i class="fa fa-phone"></i>	
+						<h2>Phone Call</h2>
+						<p>07 3161 2248</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="hi-icon-wrap hi-icon-effect wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" >
+						<i class="fa fa-envelope"></i>	
+						<h2>E-Mail</h2>
+						<p>Quisque eu ante at tortor imperdiet gravida nec sed turpis phasellus.</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="hi-icon-wrap hi-icon-effect wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms" >
+						<i class="fa fa-map-marker"></i>	
+						<h2>Location</h2>
+						<p>90 Oakleaf Street Eight Mile Plains 4113 QLD</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="hi-icon-wrap hi-icon-effect wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms" >
+						<i class="fa fa-clock-o"></i>	
+						<h2>Working Hours</h2>
+						<p>Quisque eu ante at tortor imperdiet gravida nec sed turpis phasellus.</p>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+    </section><!--/#contact-page-->
+	
+	<footer>
+		<div class="footer">
+			<div class="container">
+				<div class="social-icon">
+					<div class="col-md-4">
+						<ul class="social-network">
+							<li><a href="#" class="fb tool-tip" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#" class="twitter tool-tip" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#" class="gplus tool-tip" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+							<li><a href="#" class="linkedin tool-tip" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="#" class="ytube tool-tip" title="You Tube"><i class="fa fa-youtube-play"></i></a></li>
+						</ul>	
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-md-offset-4">
+					<div class="copyright">
+						&copy; 2016 Hebron Smart Tiling. All Rights Reserved.
+                        <div class="credits">
+                            <!-- 
+                                All the links in the footer should remain intact. 
+                                You can delete the links only if you purchased the pro version.
+                                Licensing information: https://bootstrapmade.com/license/
+                                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Company
+                            -->
+                            
+                        </div>
+					</div>
+				</div>						
+			</div>
+			<div class="pull-right">
+				<a href="#home" class="scrollup"><i class="fa fa-angle-up fa-3x"></i></a>
+			</div>
+		</div>
+	</footer>
