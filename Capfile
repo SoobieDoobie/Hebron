@@ -1,5 +1,5 @@
 
-require 'capistrano/passenger'
+
 require 'capistrano/rbenv'
 set :rbenv_type, :ubuntu
 set :rbenv_ruby, 'ruby 2.2.6p396'
