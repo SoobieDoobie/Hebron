@@ -1,8 +1,8 @@
 require 'capistrano/rails'
 require 'capistrano/passenger'
 require 'capistrano/rbenv'
-set :rbenv_type, :user
-set :rbenv_ruby, '2.4.0'
+set :rbenv_type, :ubuntu
+set :rbenv_ruby, 'ruby 2.2.6p396'
 
 
 # Load DSL and set up stages
