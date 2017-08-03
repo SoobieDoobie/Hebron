@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   get '/contact' => 'home#contact'
   get '/quotes' => 'posts#quotes'
   get '/gallery' => 'home#gallery'
-  get '/google35cf72b53dfa0539' => 'home#google35cf72b53dfa0539'
   get '/posts/:post_id/delete' => 'posts#delete'
   get '/comments/:id/delete' => 'comments#delete'
   
